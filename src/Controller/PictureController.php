@@ -20,6 +20,7 @@ class PictureController extends AbstractController
     public function index(): Response
     {
         $pictures = $this->pictureRepository->findAll();
+        // dd($this->getUser());
         return $this->json($pictures, 200, [], ['groups' => 'allPicture']);
     }
 

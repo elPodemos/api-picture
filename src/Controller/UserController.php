@@ -20,6 +20,7 @@ class UserController extends AbstractController
     public function index(): Response
     {
         $users = $this->userRepository->findAll();
+        // var_dump($this->getUser());
         return $this->json($users, 200, [], ['groups' => 'allUser']);
     }
 
